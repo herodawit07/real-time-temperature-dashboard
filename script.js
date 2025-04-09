@@ -1,4 +1,4 @@
-// Array of city data
+
 const cities = [
     { name: "Addis Ababa", celsius: 22 },
     { name: "New York", celsius: 5 },
@@ -9,10 +9,10 @@ const cities = [
     { name: "Brazil", celsius: 28 }
   ];
   
-  // Arrow function to convert Celsius to Fahrenheit
+  
   const toFahrenheit = c => (c * 9 / 5 + 32).toFixed(1);
   
-  // Arrow function to determine weather status
+ 
   const getAdvisory = c => {
     if (c <= 0) return "Freezing ❄️";
     if (c <= 10) return "Cold 🥶";
@@ -21,14 +21,14 @@ const cities = [
     return "Hot 🔥";
   };
   
-  // Inject into DOM
+  
   const dashboard = document.getElementById("dashboard");
   
   cities.forEach(city => {
     const fahrenheit = toFahrenheit(city.celsius);
     const advisory = getAdvisory(city.celsius);
   
-    // Create Bootstrap card for each city
+    
     dashboard.innerHTML += `
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card shadow-sm h-100">
